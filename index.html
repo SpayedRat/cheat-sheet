@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>CSS Selectors and Specificity</title>
+    <link href="./styles.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+
+    <header>
+      <h1>CSS Selectors and Specificity</h1>
+      <h3>A Cheat Sheet</h3>
+    </header>
+
+    <main>
+
+      <h2>CSS Selectors</h2>
+
+      <table>
+
+        <thead>
+          <th>Type of Selector</th>
+          <th>Example HTML</th>
+          <th>Example CSS Selector</th>
+          <th>Description</th>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Tag</td>
+            <td class="code">&lt;p&gt;...&lt;/p&gt;</td>
+            <td class="code">p</td>
+            <td>Selects all elements with a given tag name.</td>
+          </tr>
+
+          <tr>
+            <td>Class</td>
+            <td class="code">&lt;h3 class="brand"&gt;...&lt;/h3&gt;</td>
+            <td class="code">brand</td>
+            <td>Selects all elements with a given class name. Classes can be reused for more than one HTML element.</td>
+          </tr>
+
+          <tr>
+            <td>ID</td>
+            <td class="code">&lt;h2 id="more-info"&gt;...&lt;/h2&gt;</td>
+            <td class="code">more-info</td>
+            <td>Selects an element with a given ID name. IDs can only be used once for any given HTML element.</td>
+          </tr>
+
+          <tr>
+            <td>Chaining Selectors</td>
+            <td class="code">&lt;h1 class="special"&gt;...&lt;/h1&gt;</td>
+            <td class="code">h1.special</td>
+            <td>Selects all elements with a given combination of selectors, by chaining on one or more selectors with no space in between their names. In this example, the selector does not select an <code>h1</code> element if it does not have the class attribute <code>special</code>.</td>
+          </tr>
+
+          <tr>
+            <td>Nested Elements</td>
+            <td class="code">
+              &lt;ul class="main-list"&gt;<br />
+              &emsp;&emsp;&lt;li&gt; ... &lt;/li&gt;<br />
+              &emsp;&emsp;&lt;li&gt; ... &lt;/li&gt;<br />
+              &emsp;&emsp;&lt;li&gt; ... &lt;/li&gt;<br />
+              &lt;/ul&gt;
+            </td>
+            <td class="code">.main-list li</td>
+            <td>Selects all elements of a given selector that are nested inside elements of another selector, separate by a space. In this example, all <code>li</code> tags nested inside the HTML element with class name <code>main-list</code> are selected.</td>
+          </tr>
+
+          <tr>
+            <td>Multiple Selectors</td>
+            <td class="code">
+              &lt;h1&gt;...&lt;/h1&gt;<br />
+              ...<br />
+              &lt;div class="more-info"&gt;...&lt;/div&gt;<br />
+            </td>
+            <td class="code">h1, .more-info</td>
+            <td>Selects multiple selectors independently in order to apply the same style to all of them. In this example, HTML elements with <code>h1</code> tags and HTML elements with <code>more-info</code> class names are both selected.</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </main>
+
+  </body>
+
+</html>
